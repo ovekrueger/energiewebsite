@@ -1,4 +1,6 @@
-/* Grundfarben für Ruths Theme (Variante C) */
+/* =========================================
+   Grundfarben (Variante C)
+   ========================================= */
 
 :root {
   --night: #0b0f12;
@@ -7,20 +9,46 @@
   --light: #f9f9f9;
 }
 
-/* Hintergrund */
+/* =========================================
+   Basis Hintergrund & Textfarbe
+   ========================================= */
+
 body {
   background: var(--night);
   color: var(--light);
+  margin: 0;
+  padding: 0;
+  font-family: sans-serif;
 }
 
-/* Mini-Sternenstaub (dezent, kaum sichtbar) */
+/* =========================================
+   Sternenstaub (organisch, NICHT symmetrisch)
+   ========================================= */
+
 .stardust {
-  background-image: radial-gradient(var(--light) 0.5px, transparent 1px);
-  background-size: 40px 40px;
-  opacity: 0.12;
+  background-color: var(--night);
+  background-image:
+    radial-gradient(var(--light) 0.4px, transparent 1px),
+    radial-gradient(var(--light) 0.6px, transparent 1px),
+    radial-gradient(var(--light) 0.3px, transparent 1px),
+    radial-gradient(var(--light) 0.5px, transparent 1px);
+  background-size:
+    1300px 1100px,
+    1700px 1400px,
+    900px 1500px,
+    2000px 1800px;
+  background-position:
+    -200px 150px,
+    400px -300px,
+    -500px -700px,
+    700px 500px;
+  opacity: 0.07;
 }
 
-/* Akzentfarben */
+/* =========================================
+   Akzentfarben
+   ========================================= */
+
 .accent-rose {
   color: var(--rose);
 }
@@ -28,12 +56,37 @@ body {
 .accent-lavender {
   color: var(--lavender);
 }
-<section class="hero">
-  <h1 class="accent-rose">Lichtfeder</h1>
-  <h2 class="accent-lavender">Heilung durch Energie, Atem und Klang</h2>
 
-  <p class="hero-sub">
-    Ein Raum für Frauen, die in der zweiten Lebenshälfte ihre Kraft, 
-    Tiefe und innere Führung wiederentdecken möchten.
-  </p>
-</section>
+/* =========================================
+   HERO-Bereich (zentriert, lesbar)
+   ========================================= */
+
+.hero {
+  width: 100%;
+  text-align: center;
+  padding: 140px 40px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.hero h1 {
+  font-size: 3rem;
+  margin: 0 0 10px 0;
+  letter-spacing: 1px;
+}
+
+.hero h2 {
+  font-size: 1.4rem;
+  font-weight: 300;
+  margin: 0 0 25px 0;
+}
+
+.hero-sub {
+  max-width: 600px;
+  margin: 0 auto;
+  opacity: 0.85;
+  font-size: 1.1rem;
+  line-height: 1.5;
+}
