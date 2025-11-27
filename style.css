@@ -3,14 +3,14 @@
    ========================================= */
 :root {
   --night: #0b0f12;
-  --rose: #eac7d8;        /* H1 */
-  --lavender: #cbbad7;    /* H2 + Links */
-  --light: #ffffff;       /* Body-Text */
-  --light-soft: #f2f2f2;  /* Untertitel */
+  --rose: #eac7d8;
+  --lavender: #cbbad7;
+  --light: #ffffff;
+  --light-soft: #f2f2f2;
 }
 
 /* =========================================
-   Hintergrund & Standardschrift
+   Hintergrund & Schrift
    ========================================= */
 body {
   background: var(--night);
@@ -44,7 +44,7 @@ body {
 }
 
 /* =========================================
-   Überschriften & Text
+   Typografie
    ========================================= */
 h1 {
   color: var(--rose);
@@ -65,7 +65,7 @@ h2 {
 }
 
 /* =========================================
-   Hero-Bereich
+   HERO
    ========================================= */
 .hero {
   width: 100%;
