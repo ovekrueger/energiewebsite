@@ -1,0 +1,30 @@
+/* Grundfarben für Ruths Theme (Variante C) */
+
+:root {
+  --night: #0b0f12;
+  --rose: #eac7d8;
+  --lavender: #cbbad7;
+  --light: #f9f9f9;
+}
+
+/* Hintergrund */
+body {
+  background: var(--night);
+  color: var(--light);
+}
+
+/* Mini-Sternenstaub (dezent, kaum sichtbar) */
+.stardust {
+  background-image: radial-gradient(var(--light) 0.5px, transparent 1px);
+  background-size: 40px 40px; /* sehr fein */
+  opacity: 0.12; /* fast unsichtbar */
+}
+
+/* Akzentfarben */
+.accent-rose {
+  color: var(--rose);
+}
+
+.accent-lavender {
+  color: var(--lavender);
+}
