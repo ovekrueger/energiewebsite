@@ -39,3 +39,26 @@ h2 {
   line-height: 1.5;
   font-size: 1.1rem;
 }
+/* =========================================
+   NAVIGATION
+   ========================================= */
+.main-nav {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  gap: 24px;
+  margin-top: 30px;
+  margin-bottom: 60px;
+}
+
+.main-nav a {
+  color: var(--lavender);
+  font-size: 1rem;
+  font-weight: 500;
+  text-decoration: none;
+}
+
+.main-nav a:hover {
+  color: var(--rose);
+  text-decoration: underline;
+}
