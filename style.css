@@ -28,3 +28,12 @@ body {
 .accent-lavender {
   color: var(--lavender);
 }
+<section class="hero">
+  <h1 class="accent-rose">Lichtfeder</h1>
+  <h2 class="accent-lavender">Heilung durch Energie, Atem und Klang</h2>
+
+  <p class="hero-sub">
+    Ein Raum für Frauen, die in der zweiten Lebenshälfte ihre Kraft, 
+    Tiefe und innere Führung wiederentdecken möchten.
+  </p>
+</section>
