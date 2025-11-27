@@ -13,3 +13,29 @@ h1 {
   color: #eac7d8;  /* Rosé */
   font-size: 2.5rem;
 }
+/* Hero-Bereich */
+.hero {
+  width: 100%;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  padding: 40px;
+}
+
+h2 {
+  color: #cbbad7; /* Lavender */
+  font-weight: 300;
+  margin-top: -10px;
+  margin-bottom: 25px;
+}
+
+.hero-sub {
+  color: #f2f2f2;
+  opacity: 0.95;
+  max-width: 600px;
+  line-height: 1.5;
+  font-size: 1.1rem;
+}
