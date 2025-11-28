@@ -57,7 +57,28 @@ h2 {
   font-weight: 500;
   text-decoration: none;
 }
-
+/* =========================================
+   Globaler Sternenstaub – zart & organisch
+   ========================================= */
+body.stardust {
+  background-color: var(--night);
+  background-image:
+    radial-gradient(var(--light) 0.4px, transparent 1px),
+    radial-gradient(var(--light) 0.6px, transparent 1px),
+    radial-gradient(var(--light) 0.3px, transparent 1px),
+    radial-gradient(var(--light) 0.5px, transparent 1px);
+  background-size:
+    1200px 900px,
+    1600px 1300px,
+    900px 1400px,
+    1800px 1600px;
+  background-position:
+    -200px 200px,
+    300px -300px,
+    -500px -600px,
+    600px 400px;
+  opacity: 0.08;
+}
 .main-nav a:hover {
   color: var(--rose);
   text-decoration: underline;
