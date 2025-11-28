@@ -16,7 +16,7 @@ body {
   margin: 0;
   font-family: sans-serif;
   color: var(--light);
- background: none;
+  background: none; /* wichtig: wird von .stardust ersetzt */
 }
 
 /* ==========================
@@ -72,29 +72,39 @@ body {
   color: var(--light-soft);
   opacity: 0.95;
 }
+
 /* ==========================
    Glühwürmchen / Sternenstaub
    ========================== */
 
 body.stardust {
-  background-color: #13171c; /* etwas heller als night */
+  background-color: #13171c; /* leicht heller für Sternkontrast */
+
   background-image:
+    /* weiße kleine Sterne */
     radial-gradient(rgba(255,255,255,0.9) 1px, transparent 1px),
     radial-gradient(rgba(255,255,255,0.7) 1px, transparent 1px),
-    radial-gradient(rgba(212,175,55,0.6) 1.4px, transparent 1px),
-    radial-gradient(rgba(255,255,255,0.5) 0.8px, transparent 1px),
-    radial-gradient(rgba(212,175,55,0.4) 0.9px, transparent 1px);
+
+    /* goldene Glühwürmchen */
+    radial-gradient(rgba(212,175,55,0.6) 1.6px, transparent 1px),
+    radial-gradient(rgba(212,175,55,0.5) 1.2px, transparent 1px),
+
+    /* extra feine Sterne */
+    radial-gradient(rgba(255,255,255,0.4) 0.8px, transparent 1px);
+
   background-size:
     900px 700px,
     1100px 900px,
     1300px 1000px,
     1500px 1200px,
-    1700px 1300px;
+    1700px 1400px;
+
   background-position:
     0 0,
     200px 150px,
     -300px -200px,
     400px 300px,
-    -500px 400px;
+    -500px 420px;
+
   background-repeat: repeat;
 }
