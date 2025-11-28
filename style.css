@@ -79,16 +79,20 @@ body {
 
 body.stardust {
   background-color: var(--night);
+
+  /* 3 Ebenen Sterne – groß, fein, gold */
   background-image:
-    radial-gradient(rgba(255, 255, 255, 0.25) 1px, transparent 1px),
-    radial-gradient(rgba(212, 175, 55, 0.18) 1.2px, transparent 1px),
-    radial-gradient(rgba(255, 255, 255, 0.2) 0.8px, transparent 1px);
+    radial-gradient(rgba(255, 255, 255, 0.55) 1.6px, transparent 1px),
+    radial-gradient(rgba(212, 175, 55, 0.35) 2px, transparent 1px),
+    radial-gradient(rgba(255, 255, 255, 0.4) 1px, transparent 1px);
+
   background-size:
-    900px 700px,
-    1400px 1100px,
-    1800px 1500px;
+    600px 500px,
+    900px 800px,
+    1400px 1200px;
+
   background-position:
-    -200px 200px,
-    300px -250px,
-    -450px -600px;
+    0px 0px,
+    200px -100px,
+    -300px -200px;
 }
