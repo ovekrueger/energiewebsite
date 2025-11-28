@@ -80,31 +80,40 @@ body {
 body.stardust {
   background-color: var(--night);
 
-  /* 7 Ebenen Sterne – verschiedene Größen, sehr organisch */
   background-image:
-    radial-gradient(rgba(255, 255, 255, 0.6) 2px, transparent 1px),      /* größte weißen Sterne */
-    radial-gradient(rgba(212, 175, 55, 0.45) 1.8px, transparent 1px),   /* größere goldene Punkte */
-    radial-gradient(rgba(255, 255, 255, 0.5) 1.4px, transparent 1px),   /* mittlere */
-    radial-gradient(rgba(212, 175, 55, 0.3) 1.2px, transparent 1px),    /* kleine goldene */
-    radial-gradient(rgba(255, 255, 255, 0.35) 1px, transparent 1px),    /* kleine weiße */
-    radial-gradient(rgba(255, 255, 255, 0.25) 0.8px, transparent 1px),  /* sehr feine */
-    radial-gradient(rgba(255, 255, 255, 0.18) 0.6px, transparent 1px);  /* superfeine */
+    /* große sanfte weiße Sterne */
+    radial-gradient(rgba(255, 255, 255, 0.55) 2px, transparent 1px),
+    radial-gradient(rgba(255, 255, 255, 0.4) 1.6px, transparent 1px),
+
+    /* goldene Sterne */
+    radial-gradient(rgba(212, 175, 55, 0.45) 1.8px, transparent 1px),
+    radial-gradient(rgba(212, 175, 55, 0.3) 1.2px, transparent 1px),
+
+    /* mittlere Sterne */
+    radial-gradient(rgba(255, 255, 255, 0.35) 1.2px, transparent 1px),
+    radial-gradient(rgba(255, 255, 255, 0.25) 1px, transparent 1px),
+
+    /* feiner Staub */
+    radial-gradient(rgba(255, 255, 255, 0.15) 0.7px, transparent 1px),
+    radial-gradient(rgba(255, 255, 255, 0.1) 0.6px, transparent 1px);
 
   background-size:
-    500px 500px,   /* große Sterne dichter */
-    700px 600px,
+    400px 350px,
+    500px 450px,
+    600px 550px,
+    700px 650px,
     900px 800px,
-    1200px 1000px,
-    1500px 1300px,
-    1800px 1600px,
-    2100px 1800px;
+    1100px 950px,
+    1400px 1200px,
+    1800px 1500px;
 
   background-position:
-    -100px 40px,
-    200px -150px,
-    -300px -250px,
+    -200px 150px,
+    100px -250px,
+    -350px -200px,
     350px 400px,
-    -250px 200px,
-    150px 550px,
-    -450px -100px;
+    -150px 250px,
+    200px 550px,
+    -450px -50px,
+    300px 100px;
 }
