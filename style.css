@@ -33,7 +33,9 @@ body.stardust {
     300px -300px,
     -500px -600px,
     600px 400px;
-  opacity: 0.08;
+
+  /* WICHTIG: Transparenz nur auf das Muster, nicht auf die komplette Seite */
+  background-blend-mode: lighten;
 }
 
 .main-nav a:hover {
