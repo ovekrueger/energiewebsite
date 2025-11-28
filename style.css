@@ -76,18 +76,19 @@ body {
 /* ==========================
    Sternenstaub (global)
    ========================== */
+
 body.stardust {
   background-color: var(--night);
   background-image:
-    radial-gradient(var(--light) 0.4px, transparent 1px),
-    radial-gradient(var(--light) 0.6px, transparent 1px),
-    radial-gradient(var(--light) 0.3px, transparent 1px);
+    radial-gradient(rgba(255, 255, 255, 0.25) 1px, transparent 1px),
+    radial-gradient(rgba(212, 175, 55, 0.18) 1.2px, transparent 1px),
+    radial-gradient(rgba(255, 255, 255, 0.2) 0.8px, transparent 1px);
   background-size:
-    1200px 900px,
-    1800px 1500px,
-    1400px 2000px;
+    900px 700px,
+    1400px 1100px,
+    1800px 1500px;
   background-position:
-    -200px 300px,
-    600px -300px,
-    -400px -500px;
+    -200px 200px,
+    300px -250px,
+    -450px -600px;
 }
