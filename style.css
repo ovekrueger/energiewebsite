@@ -1,5 +1,13 @@
 
 /* Basisstyles zum Testen */
+/* Farbvariablen – unbedingt erforderlich */
+:root {
+  --night: #0b0f12;
+  --rose: #eac7d8;
+  --lavender: #cbbad7;
+  --light: #ffffff;
+  --light-soft: #f2f2f2;
+}
 
 body {
   background: #0b0f12; /* Nachtgrau */
