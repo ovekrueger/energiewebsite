@@ -201,3 +201,23 @@ body.stardust {
   max-width: 700px;
   margin: 0 auto;
 }
+/* Navigation sichtbar machen */
+.main-nav {
+  position: relative;
+  z-index: 10;
+  padding: 1.5rem 0;
+  text-align: center;
+}
+
+.main-nav a {
+  color: #f3e8ff; /* hell-lila, gut lesbar */
+  margin: 0 1rem;
+  opacity: 0.9;
+  font-weight: 500;
+  text-decoration: none;
+}
+
+.main-nav a:hover {
+  opacity: 1;
+}
+
