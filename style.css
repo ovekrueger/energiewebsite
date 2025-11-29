@@ -78,8 +78,8 @@ body {
    ========================== */
 
 body.stardust {
-  background-color: #13171c; /* leicht heller für Sternkontrast */
-
+  background: #11141a; /* leicht heller, wärmer, weniger hart */
+}
   background-image:
     /* weiße kleine Sterne */
     radial-gradient(rgba(255,255,255,0.9) 1px, transparent 1px),
