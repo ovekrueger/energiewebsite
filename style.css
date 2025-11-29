@@ -1,3 +1,4 @@
+
 /* ==========================
    Farbvariablen
    ========================== */
@@ -228,4 +229,17 @@ body.stardust {
   font-weight: 500;
   text-decoration: none;
 }
-https://ovekrueger.github.io/energiewebsite
+/* ==========================
+   Fix: Navigation klickbar machen
+   ========================== */
+
+.main-nav {
+  position: relative;
+  z-index: 9999; /* Menü ganz nach oben */
+}
+
+.hero-bg {
+  pointer-events: none; /* Bild fängt keine Klicks mehr ab */
+  z-index: 1;           /* Hintergrund ganz unten */
+}
+
