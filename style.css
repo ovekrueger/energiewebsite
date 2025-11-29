@@ -173,3 +173,31 @@ body.stardust {
   background: linear-gradient(to bottom, transparent, #11141a);
   z-index: 1;
 }
+/* ============================================
+   HERO – Unterseiten
+   ============================================ */
+
+.hero-page {
+  height: 40vh;           /* etwas kürzer als Startseite */
+  min-height: 300px;      
+  justify-content: center;
+}
+
+.hero-page .hero-inner {
+  text-align: center;
+  z-index: 2;
+}
+
+.page-title {
+  font-size: 2.5rem;
+  color: #f3e8ff;
+  margin-bottom: 0.4rem;
+}
+
+.page-sub {
+  font-size: 1.2rem;
+  color: #f3e8ff;
+  opacity: 0.85;
+  max-width: 700px;
+  margin: 0 auto;
+}
