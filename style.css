@@ -221,3 +221,10 @@ body.stardust {
   opacity: 1;
 }
 
+/* Navigation final sichtbar */
+.main-nav a {
+  color: #ffffff !important;   /* maximal sichtbar */
+  opacity: 1 !important;       /* kein Ausgrauen */
+  font-weight: 500;
+  text-decoration: none;
+}
