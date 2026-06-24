@@ -7,16 +7,17 @@
    Farbvariablen
    ========================== */
 :root {
-  --hintergrund:  #1a2a35;   /* tiefes Blau-Grün – warm, nicht schwarz */
-  --tuerkis:      #4db6ac;   /* Heilung, Weite, Wasser */
-  --blau:         #5c8fa8;   /* Tiefe, Vertrauen, Stille */
-  --gold:         #c9923a;   /* Licht, Wärme, Sonnenaufgang */
-  --gold-hell:    #e8b86d;   /* Akzent, Hover */
-  --rosa:         #d4929f;   /* Sanftheit, Herz */
-  --lavendel:     #b8a0c8;   /* Akzent */
-  --hell:         #f0ebe2;   /* warmes Weiß – kein reines #fff */
-  --hell-soft:    #d8d0c4;   /* gedämpftes Licht für Fließtext */
-  --trennlinie:   #c9923a;   /* goldene Linie – Signature-Element */
+  --hintergrund:  #f0ebe2;   /* warmes Beige – einladend, hell */
+  --tuerkis:      #2e8b84;   /* dunkler für Lesbarkeit auf hellem Grund */
+  --blau:         #3d6e87;   /* Tiefe, Vertrauen, Stille */
+  --gold:         #b07830;   /* dunkler für Lesbarkeit */
+  --gold-hell:    #c9923a;   /* Akzent, Hover */
+  --rosa:         #b86070;   /* Sanftheit, Herz */
+  --lavendel:     #7a6090;   /* Akzent */
+  --text:         #2a2018;   /* warmes Dunkelbraun – Haupttext */
+  --text-soft:    #5a4e40;   /* gedämpft für Fließtext */
+  --trennlinie:   #b07830;   /* goldene Linie – Signature-Element */
+  --nav-bg:       rgba(42, 32, 24, 0.88);  /* dunkle Nav auf hellem Grund */
 }
 
 /* ==========================
@@ -31,7 +32,7 @@ body {
   font-family: 'Segoe UI', Arial, sans-serif;
   font-size: 1rem;
   line-height: 1.7;
-  color: var(--hell);
+  color: var(--text);
   background-color: var(--hintergrund);
 }
 
@@ -47,12 +48,12 @@ body {
   flex-wrap: wrap;
   gap: 0;
   padding: 1.5rem 1rem;
-  background: rgba(26, 42, 53, 0.85);
+  background: var(--nav-bg);
   backdrop-filter: blur(6px);
 }
 
 .main-nav a {
-  color: var(--hell);
+  color: #f0ebe2;
   font-size: 0.95rem;
   font-weight: 500;
   letter-spacing: 0.04em;
@@ -80,6 +81,7 @@ body {
   text-align: center;
   padding: 3rem 2rem;
   overflow: hidden;
+  background: linear-gradient(135deg, #e8d5b0 0%, #d4ede8 50%, #e8d5b0 100%);
 }
 
 .hero-bg {
@@ -118,7 +120,7 @@ body {
   font-size: clamp(2.2rem, 5vw, 3.5rem);
   font-weight: 300;
   letter-spacing: 0.06em;
-  color: var(--hell);
+  color: var(--text);
   margin: 0 0 0.4rem 0;
 }
 
@@ -134,7 +136,7 @@ body {
   max-width: 600px;
   font-size: 1.05rem;
   line-height: 1.65;
-  color: var(--hell-soft);
+  color: var(--text-soft);
 }
 
 /* ==========================
@@ -179,13 +181,13 @@ body {
 .content h3 {
   font-size: 1.2rem;
   font-weight: 500;
-  color: var(--gold-hell);
+  color: var(--gold);
   margin-top: 2rem;
   margin-bottom: 0.5rem;
 }
 
 .content p {
-  color: var(--hell-soft);
+  color: var(--text-soft);
   margin-bottom: 1.2rem;
 }
 
@@ -207,19 +209,18 @@ footer {
   text-align: center;
   padding: 2rem 1rem;
   font-size: 0.85rem;
-  color: var(--hell-soft);
-  opacity: 0.6;
-  border-top: 1px solid rgba(201, 146, 58, 0.2);
+  color: var(--text-soft);
+  border-top: 1px solid rgba(176, 120, 48, 0.3);
 }
 
 footer a {
-  color: var(--hell-soft);
+  color: var(--text-soft);
   text-decoration: none;
   margin: 0 0.6rem;
 }
 
 footer a:hover {
-  color: var(--gold-hell);
+  color: var(--gold);
 }
 
 /* ==========================
