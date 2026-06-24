@@ -1,245 +1,257 @@
+/* ============================================================
+   Ruth Gröger – Energiemedizin & Gesundheitscoach
+   style.css | Stand: Juni 2026
+   ============================================================ */
 
 /* ==========================
    Farbvariablen
    ========================== */
 :root {
-  --night: #11161c;
-  --rose: #eac7d8;
-  --lavender: #cbbad7;
-  --light: #ffffff;
-  --light-soft: #f2f2f2;
+  --hintergrund:  #1a2a35;   /* tiefes Blau-Grün – warm, nicht schwarz */
+  --tuerkis:      #4db6ac;   /* Heilung, Weite, Wasser */
+  --blau:         #5c8fa8;   /* Tiefe, Vertrauen, Stille */
+  --gold:         #c9923a;   /* Licht, Wärme, Sonnenaufgang */
+  --gold-hell:    #e8b86d;   /* Akzent, Hover */
+  --rosa:         #d4929f;   /* Sanftheit, Herz */
+  --lavendel:     #b8a0c8;   /* Akzent */
+  --hell:         #f0ebe2;   /* warmes Weiß – kein reines #fff */
+  --hell-soft:    #d8d0c4;   /* gedämpftes Licht für Fließtext */
+  --trennlinie:   #c9923a;   /* goldene Linie – Signature-Element */
 }
 
 /* ==========================
    Grundlayout
    ========================== */
+*, *::before, *::after {
+  box-sizing: border-box;
+}
+
 body {
   margin: 0;
-  font-family: sans-serif;
-  color: var(--light);
-  background: none; /* wichtig: wird von .stardust ersetzt */
+  font-family: 'Segoe UI', Arial, sans-serif;
+  font-size: 1rem;
+  line-height: 1.7;
+  color: var(--hell);
+  background-color: var(--hintergrund);
 }
 
 /* ==========================
    Navigation
    ========================== */
 .main-nav {
+  position: relative;
+  z-index: 100;
   width: 100%;
   display: flex;
   justify-content: center;
-  gap: 28px;
-  padding: 24px 0;
+  flex-wrap: wrap;
+  gap: 0;
+  padding: 1.5rem 1rem;
+  background: rgba(26, 42, 53, 0.85);
+  backdrop-filter: blur(6px);
 }
 
 .main-nav a {
-  color: var(--lavender);
-  font-size: 1rem;
+  color: var(--hell);
+  font-size: 0.95rem;
+  font-weight: 500;
+  letter-spacing: 0.04em;
   text-decoration: none;
+  padding: 0.3rem 1.1rem;
+  border-radius: 2px;
+  transition: color 0.2s ease;
 }
 
 .main-nav a:hover {
-  color: var(--rose);
+  color: var(--gold-hell);
 }
 
 /* ==========================
-   Hero
+   Hero – Startseite
    ========================== */
 .hero {
+  position: relative;
+  width: 100%;
   min-height: 70vh;
   display: flex;
   flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  text-align: center;
-  padding: 40px;
-}
-
-.hero h1 {
-  font-size: 3.2rem;
-  color: var(--rose);
-  margin-bottom: 10px;
-}
-
-.hero h2 {
-  font-size: 1.5rem;
-  color: var(--lavender);
-  font-weight: 300;
-  margin-bottom: 24px;
-}
-
-.hero-sub {
-  max-width: 600px;
-  line-height: 1.5;
-  color: var(--light-soft);
-  opacity: 0.95;
-}
-
-/* ==========================
-   Glühwürmchen / Sternenstaub
-   ========================== */
-
-body.stardust {
-  background: #11141a; /* leicht heller, wärmer, weniger hart */
-}
-  background-image:
-    /* weiße kleine Sterne */
-    radial-gradient(rgba(255,255,255,0.9) 1px, transparent 1px),
-    radial-gradient(rgba(255,255,255,0.7) 1px, transparent 1px),
-
-    /* goldene Glühwürmchen */
-    radial-gradient(rgba(212,175,55,0.6) 1.6px, transparent 1px),
-    radial-gradient(rgba(212,175,55,0.5) 1.2px, transparent 1px),
-
-    /* extra feine Sterne */
-    radial-gradient(rgba(255,255,255,0.4) 0.8px, transparent 1px);
-
-  background-size:
-    900px 700px,
-    1100px 900px,
-    1300px 1000px,
-    1500px 1200px,
-    1700px 1400px;
-
-  background-position:
-    0 0,
-    200px 150px,
-    -300px -200px,
-    400px 300px,
-    -500px 420px;
-
-  background-repeat: repeat;
-}
-/* ============================================
-   HERO – Ruth
-   ============================================ */
-
-.hero{
-  position: relative;
-  width: 100%;
-  height: 70vh;
-  min-height: 480px;
-  display: flex;
-  flex-direction: column;
   justify-content: center;
   align-items: center;
   text-align: center;
-  padding: 0 2rem;
+  padding: 3rem 2rem;
   overflow: hidden;
 }
 
-.hero-bg{
+.hero-bg {
   position: absolute;
-  top: 0;
-  left: 0;
+  inset: 0;
   width: 100%;
   height: 100%;
   object-fit: cover;
+  object-position: center;
+  z-index: 0;
+  opacity: 0.45;
+  pointer-events: none;
+}
+
+/* Weicher Übergang nach unten */
+.hero::after {
+  content: "";
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  height: 140px;
+  background: linear-gradient(to bottom, transparent, var(--hintergrund));
   z-index: 1;
-  opacity: 0.55;
+  pointer-events: none;
 }
 
 .hero h1,
 .hero h2,
-.hero-sub{
+.hero-sub {
   position: relative;
   z-index: 2;
-  color: #f3e8ff;
 }
 
-.hero h1{
-  font-size: 3rem;
-  margin-bottom: 0.3rem;
+.hero h1 {
+  font-size: clamp(2.2rem, 5vw, 3.5rem);
+  font-weight: 300;
+  letter-spacing: 0.06em;
+  color: var(--hell);
+  margin: 0 0 0.4rem 0;
 }
 
-.hero h2{
-  font-size: 1.5rem;
-  font-weight: 400;
-  opacity: .85;
+.hero h2 {
+  font-size: clamp(1rem, 2.5vw, 1.4rem);
+  font-weight: 300;
+  color: var(--tuerkis);
+  margin: 0 0 1.5rem 0;
+  letter-spacing: 0.03em;
+}
+
+.hero-sub {
+  max-width: 600px;
+  font-size: 1.05rem;
+  line-height: 1.65;
+  color: var(--hell-soft);
+}
+
+/* ==========================
+   Hero – Unterseiten
+   ========================== */
+.hero-page {
+  min-height: 38vh;
+}
+
+.hero-page h1 {
+  font-size: clamp(1.8rem, 4vw, 2.8rem);
+}
+
+/* ==========================
+   Goldene Trennlinie (Signature)
+   ========================== */
+.gold-divider {
+  display: block;
+  width: 60px;
+  height: 2px;
+  background: var(--trennlinie);
+  margin: 2rem auto;
+  border: none;
+}
+
+/* ==========================
+   Hauptinhalt
+   ========================== */
+.content {
+  max-width: 780px;
+  margin: 0 auto;
+  padding: 3rem 2rem 4rem;
+}
+
+.content h2 {
+  font-size: 1.6rem;
+  font-weight: 300;
+  color: var(--tuerkis);
+  margin-bottom: 1rem;
+}
+
+.content h3 {
+  font-size: 1.2rem;
+  font-weight: 500;
+  color: var(--gold-hell);
+  margin-top: 2rem;
+  margin-bottom: 0.5rem;
+}
+
+.content p {
+  color: var(--hell-soft);
   margin-bottom: 1.2rem;
 }
 
-.hero-sub{
-  font-size: 1.1rem;
-  opacity: .85;
-  max-width: 650px;
-  line-height: 1.5;
-}
-.hero::after{
-  content:"";
-  position:absolute;
-  bottom:0;
-  left:0;
-  width:100%;
-  height:120px;
-  background: linear-gradient(to bottom, transparent, #11141a);
-  z-index: 1;
-}
-/* ============================================
-   HERO – Unterseiten
-   ============================================ */
-
-.hero-page {
-  height: 40vh;           /* etwas kürzer als Startseite */
-  min-height: 300px;      
-  justify-content: center;
-}
-
-.hero-page .hero-inner {
-  text-align: center;
-  z-index: 2;
-}
-
-.page-title {
-  font-size: 2.5rem;
-  color: #f3e8ff;
-  margin-bottom: 0.4rem;
-}
-
-.page-sub {
-  font-size: 1.2rem;
-  color: #f3e8ff;
-  opacity: 0.85;
-  max-width: 700px;
-  margin: 0 auto;
-}
-/* Navigation sichtbar machen */
-.main-nav {
-  position: relative;
-  z-index: 10;
-  padding: 1.5rem 0;
-  text-align: center;
-}
-
-.main-nav a {
-  color: #f3e8ff; /* hell-lila, gut lesbar */
-  margin: 0 1rem;
-  opacity: 0.9;
-  font-weight: 500;
+.content a {
+  color: var(--tuerkis);
   text-decoration: none;
+  border-bottom: 1px solid transparent;
+  transition: border-color 0.2s ease;
 }
 
-.main-nav a:hover {
-  opacity: 1;
+.content a:hover {
+  border-bottom-color: var(--tuerkis);
 }
 
-/* Navigation final sichtbar */
-.main-nav a {
-  color: #ffffff !important;   /* maximal sichtbar */
-  opacity: 1 !important;       /* kein Ausgrauen */
-  font-weight: 500;
-  text-decoration: none;
-}
 /* ==========================
-   Fix: Navigation klickbar machen
+   Footer
    ========================== */
-
-.main-nav {
-  position: relative;
-  z-index: 9999; /* Menü ganz nach oben */
+footer {
+  text-align: center;
+  padding: 2rem 1rem;
+  font-size: 0.85rem;
+  color: var(--hell-soft);
+  opacity: 0.6;
+  border-top: 1px solid rgba(201, 146, 58, 0.2);
 }
 
-.hero-bg {
-  pointer-events: none; /* Bild fängt keine Klicks mehr ab */
-  z-index: 1;           /* Hintergrund ganz unten */
+footer a {
+  color: var(--hell-soft);
+  text-decoration: none;
+  margin: 0 0.6rem;
 }
 
+footer a:hover {
+  color: var(--gold-hell);
+}
+
+/* ==========================
+   Responsive
+   ========================== */
+@media (max-width: 600px) {
+  .main-nav {
+    gap: 0.2rem;
+    padding: 1rem 0.5rem;
+  }
+
+  .main-nav a {
+    font-size: 0.85rem;
+    padding: 0.3rem 0.7rem;
+  }
+
+  .content {
+    padding: 2rem 1.2rem 3rem;
+  }
+}
+
+/* ==========================
+   Barrierefreiheit
+   ========================== */
+@media (prefers-reduced-motion: reduce) {
+  * {
+    transition: none !important;
+    animation: none !important;
+  }
+}
+
+:focus-visible {
+  outline: 2px solid var(--gold);
+  outline-offset: 3px;
+}
