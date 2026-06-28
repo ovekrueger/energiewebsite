@@ -1,21 +1,21 @@
 /* ============================================================
    Ruth Gröger – Energiemedizin & Gesundheitscoach
-   style.css | Stand: Juni 2026
+   style.css | Stand: Juni 2026 | Palette: Licht & Morgen
    ============================================================ */
 
 /* ==========================
    Farbvariablen
    ========================== */
 :root {
-  --hintergrund:  #f0ebe2;   /* warmes Beige */
-  --tuerkis:      #2e8b84;   /* Heilung, Weite, Wasser */
-  --blau:         #3d6e87;   /* Tiefe, Vertrauen, Stille */
-  --gold:         #b07830;   /* Licht, Wärme */
-  --gold-hell:    #c9923a;   /* Akzent, Hover */
+  --hintergrund:  #faf6f0;   /* warmes Cremeweiß */
+  --tuerkis:      #2e6b65;   /* Heilung, Tiefe, Wasser */
+  --tuerkis-hell: #3d9e96;   /* Links, Hover */
+  --gold:         #b07830;   /* Licht, Wärme, Sonnenaufgang */
+  --gold-hell:    #d4943a;   /* Akzent, Hover */
   --text:         #2a2018;   /* warmes Dunkelbraun */
-  --text-soft:    #5a4e40;   /* gedämpft für Fließtext */
-  --trennlinie:   #b07830;   /* goldene Linie */
-  --nav-bg:       rgba(42, 32, 24, 0.88);
+  --text-soft:    #6a5e50;   /* gedämpft für Fließtext */
+  --trennlinie:   #d4943a;   /* goldene Linie */
+  --nav-bg:       rgba(42, 32, 24, 0.90);
 }
 
 /* ==========================
@@ -91,7 +91,6 @@ body {
   pointer-events: none;
 }
 
-/* Weicher Übergang nach unten */
 .hero::after {
   content: "";
   position: absolute;
@@ -99,10 +98,11 @@ body {
   left: 0;
   width: 100%;
   height: 100px;
-  background: linear-gradient(to bottom, transparent, rgba(240, 235, 226, 0.7));
+  background: linear-gradient(to bottom, transparent, rgba(250, 246, 240, 0.7));
   z-index: 1;
   pointer-events: none;
 }
+
 .hero h1,
 .hero h2,
 .hero-sub {
@@ -178,7 +178,7 @@ body {
 .content h3 {
   font-size: 1.2rem;
   font-weight: 500;
-  color: var(--gold);
+  color: var(--gold-hell);
   margin-top: 2rem;
   margin-bottom: 0.5rem;
 }
@@ -189,14 +189,14 @@ body {
 }
 
 .content a {
-  color: var(--tuerkis);
+  color: var(--tuerkis-hell);
   text-decoration: none;
   border-bottom: 1px solid transparent;
   transition: border-color 0.2s ease;
 }
 
 .content a:hover {
-  border-bottom-color: var(--tuerkis);
+  border-bottom-color: var(--tuerkis-hell);
 }
 
 /* ==========================
@@ -207,7 +207,7 @@ footer {
   padding: 2rem 1rem;
   font-size: 0.85rem;
   color: var(--text-soft);
-  border-top: 1px solid rgba(176, 120, 48, 0.3);
+  border-top: 1px solid rgba(212, 148, 58, 0.3);
 }
 
 footer a {
@@ -217,7 +217,7 @@ footer a {
 }
 
 footer a:hover {
-  color: var(--gold);
+  color: var(--gold-hell);
 }
 
 /* ==========================
@@ -249,6 +249,6 @@ footer a:hover {
 }
 
 :focus-visible {
-  outline: 2px solid var(--gold);
+  outline: 2px solid var(--gold-hell);
   outline-offset: 3px;
 }
