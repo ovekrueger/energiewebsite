@@ -31,15 +31,13 @@ body {
   font-size: 1rem;
   line-height: 1.7;
   color: var(--text);
-  background-image: linear-gradient(
+ background-image: linear-gradient(
     to bottom,
-    #e8d5b0 0%,
-    #f0e8d8 10%,
-    #f5f0e8 25%,
-    #faf6f0 50%
+    #c9a87a 0%,
+    #ddbf90 8%,
+    #ecd5aa 20%,
+    #faf6f0 45%
   );
-  background-attachment: fixed;
-}
 
 /* ==========================
    Navigation
