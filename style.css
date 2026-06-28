@@ -33,12 +33,12 @@ body {
   color: var(--text);
  background-image: linear-gradient(
     to bottom,
-    #c9a87a 0%,
-    #ddbf90 8%,
-    #ecd5aa 20%,
-    #faf6f0 45%
+    #a07840 0%,
+    #c9a87a 15%,
+    #ddbf90 30%,
+    #ecd5aa 50%,
+    #faf6f0 75%
   );
-
 /* ==========================
    Navigation
    ========================== */
