@@ -1,47 +1,261 @@
-<!doctype html>
-<html lang="de">
-<head>
-  <meta charset="utf-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>Über mich – Ruth Gröger</title>
-  <meta name="description" content="Wer ich bin und was mich bewegt" />
-  <link rel="stylesheet" href="style.css" />
-</head>
-<body>
+/* ============================================================
+   Ruth Gröger – Energiemedizin & Gesundheitscoach
+   style.css | Stand: Juni 2026 | Palette: Licht & Morgen
+   ============================================================ */
 
-  <nav class="main-nav">
-    <a href="index.html">Start</a>
-    <a href="ueber-mich.html">Über mich</a>
-    <a href="energie-medizin.html">Energiemedizin</a>
-    <a href="breathwork.html">Breathwork</a>
-    <a href="angebote.html">Angebote</a>
-    <a href="kontakt.html">Kontakt</a>
-  </nav>
+/* ==========================
+   Farbvariablen
+   ========================== */
+:root {
+  --hintergrund:  #faf6f0;   /* warmes Cremeweiß */
+  --tuerkis:      #2e6b65;   /* Heilung, Tiefe, Wasser */
+  --tuerkis-hell: #3d9e96;   /* Links, Hover */
+  --gold:         #b07830;   /* Licht, Wärme, Sonnenaufgang */
+  --gold-hell:    #d4943a;   /* Akzent, Hover */
+  --text:         #2a2018;   /* warmes Dunkelbraun */
+  --text-soft:    #6a5e50;   /* gedämpft für Fließtext */
+  --trennlinie:   #d4943a;   /* goldene Linie */
+  --nav-bg:       rgba(42, 32, 24, 0.90);
+}
 
-  <section class="hero hero-page">
-    <img src="assets/images/hero-unterseite.jpg" alt="Wer ich bin und was mich bewegt" class="hero-bg">
-    <div class="hero-inner">
-      <h1>Über mich</h1>
-      <p class="hero-sub">Mein Weg zur Energiemedizin – zwischen Pflege, Musik und schamanischer Heilarbeit.</p>
-    </div>
-  </section>
+/* ==========================
+   Grundlayout
+   ========================== */
+*, *::before, *::after {
+  box-sizing: border-box;
+}
 
-  <main class="content">
+body {
+  margin: 0;
+  font-family: 'Segoe UI', Arial, sans-serif;
+  font-size: 1rem;
+  line-height: 1.7;
+  color: var(--text);
+  background-image: linear-gradient(
+    to bottom,
+    #e8d5b0 0%,
+    #f0e8d8 10%,
+    #f5f0e8 25%,
+    #faf6f0 50%
+  );
+  background-attachment: fixed;
+}
 
-    <hr class="gold-divider">
+/* ==========================
+   Navigation
+   ========================== */
+.main-nav {
+  position: relative;
+  z-index: 100;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  padding: 1.5rem 1rem;
+  background: var(--nav-bg);
+  backdrop-filter: blur(6px);
+}
 
-    <h2>Wer ich bin und was mich bewegt</h2>
-    <p>Text folgt.</p>
+.main-nav a {
+  color: #f0ebe2;
+  font-size: 0.95rem;
+  font-weight: 500;
+  letter-spacing: 0.04em;
+  text-decoration: none;
+  padding: 0.3rem 1.1rem;
+  transition: color 0.2s ease;
+}
 
-    <hr class="gold-divider">
+.main-nav a:hover {
+  color: var(--gold-hell);
+}
 
-  </main>
+/* ==========================
+   Hero – Startseite
+   ========================== */
+.hero {
+  position: relative;
+  width: 100%;
+  min-height: 70vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  padding: 3rem 2rem;
+  overflow: hidden;
+}
 
-  <footer>
-    <a href="impressum.html">Impressum</a>
-    <a href="datenschutz.html">Datenschutz</a>
-    <span>© 2026 Ruth Gröger</span>
-  </footer>
+.hero-bg {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center top;
+  z-index: 0;
+  opacity: 0.65;
+  pointer-events: none;
+}
 
-</body>
-</html>
+.hero::after {
+  content: "";
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  height: 100px;
+  background: linear-gradient(to bottom, transparent, rgba(250, 246, 240, 0.7));
+  z-index: 1;
+  pointer-events: none;
+}
+
+.hero h1,
+.hero h2,
+.hero-sub {
+  position: relative;
+  z-index: 2;
+}
+
+.hero h1 {
+  font-size: clamp(2.2rem, 5vw, 3.5rem);
+  font-weight: 300;
+  letter-spacing: 0.06em;
+  color: #ffffff;
+  text-shadow: 0 2px 12px rgba(0,0,0,0.6), 0 1px 4px rgba(0,0,0,0.8);
+  margin: 0 0 0.4rem 0;
+}
+
+.hero h2 {
+  font-size: clamp(1rem, 2.5vw, 1.4rem);
+  font-weight: 300;
+  color: #f0ebe2;
+  text-shadow: 0 1px 8px rgba(0,0,0,0.7);
+  margin: 0 0 1.5rem 0;
+  letter-spacing: 0.03em;
+}
+
+.hero-sub {
+  max-width: 600px;
+  font-size: 1.05rem;
+  line-height: 1.65;
+  color: #f0ebe2;
+  text-shadow: 0 1px 6px rgba(0,0,0,0.6);
+}
+
+/* ==========================
+   Hero – Unterseiten
+   ========================== */
+.hero-page {
+  min-height: 38vh;
+}
+
+.hero-page h1 {
+  font-size: clamp(1.8rem, 4vw, 2.8rem);
+}
+
+/* ==========================
+   Goldene Trennlinie
+   ========================== */
+.gold-divider {
+  display: block;
+  width: 60px;
+  height: 2px;
+  background: var(--trennlinie);
+  margin: 2rem auto;
+  border: none;
+}
+
+/* ==========================
+   Hauptinhalt
+   ========================== */
+.content {
+  max-width: 780px;
+  margin: 0 auto;
+  padding: 3rem 2rem 4rem;
+}
+
+.content h2 {
+  font-size: 1.6rem;
+  font-weight: 300;
+  color: var(--tuerkis);
+  margin-bottom: 1rem;
+}
+
+.content h3 {
+  font-size: 1.2rem;
+  font-weight: 500;
+  color: var(--gold-hell);
+  margin-top: 2rem;
+  margin-bottom: 0.5rem;
+}
+
+.content p {
+  color: var(--text-soft);
+  margin-bottom: 1.2rem;
+}
+
+.content a {
+  color: var(--tuerkis-hell);
+  text-decoration: none;
+  border-bottom: 1px solid transparent;
+  transition: border-color 0.2s ease;
+}
+
+.content a:hover {
+  border-bottom-color: var(--tuerkis-hell);
+}
+
+/* ==========================
+   Footer
+   ========================== */
+footer {
+  text-align: center;
+  padding: 2rem 1rem;
+  font-size: 0.85rem;
+  color: var(--text-soft);
+  border-top: 1px solid rgba(212, 148, 58, 0.3);
+}
+
+footer a {
+  color: var(--text-soft);
+  text-decoration: none;
+  margin: 0 0.6rem;
+}
+
+footer a:hover {
+  color: var(--gold-hell);
+}
+
+/* ==========================
+   Responsive
+   ========================== */
+@media (max-width: 600px) {
+  .main-nav {
+    padding: 1rem 0.5rem;
+  }
+
+  .main-nav a {
+    font-size: 0.85rem;
+    padding: 0.3rem 0.7rem;
+  }
+
+  .content {
+    padding: 2rem 1.2rem 3rem;
+  }
+}
+
+/* ==========================
+   Barrierefreiheit
+   ========================== */
+@media (prefers-reduced-motion: reduce) {
+  * {
+    transition: none !important;
+    animation: none !important;
+  }
+}
+
+:focus-visible {
+  outline: 2px solid var(--gold-hell);
+  outline-offset: 3px;
+}
