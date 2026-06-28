@@ -31,7 +31,14 @@ body {
   font-size: 1rem;
   line-height: 1.7;
   color: var(--text);
-  background-color: var(--hintergrund);
+  background-image: linear-gradient(
+    to bottom,
+    #e8d5b0 0%,
+    #f0e8d8 10%,
+    #f5f0e8 25%,
+    #faf6f0 50%
+  );
+  background-attachment: fixed;
 }
 
 /* ==========================
