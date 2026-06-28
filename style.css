@@ -7,17 +7,15 @@
    Farbvariablen
    ========================== */
 :root {
-  --hintergrund:  #f0ebe2;   /* warmes Beige – einladend, hell */
-  --tuerkis:      #2e8b84;   /* dunkler für Lesbarkeit auf hellem Grund */
+  --hintergrund:  #f0ebe2;   /* warmes Beige */
+  --tuerkis:      #2e8b84;   /* Heilung, Weite, Wasser */
   --blau:         #3d6e87;   /* Tiefe, Vertrauen, Stille */
-  --gold:         #b07830;   /* dunkler für Lesbarkeit */
+  --gold:         #b07830;   /* Licht, Wärme */
   --gold-hell:    #c9923a;   /* Akzent, Hover */
-  --rosa:         #b86070;   /* Sanftheit, Herz */
-  --lavendel:     #7a6090;   /* Akzent */
-  --text:         #2a2018;   /* warmes Dunkelbraun – Haupttext */
+  --text:         #2a2018;   /* warmes Dunkelbraun */
   --text-soft:    #5a4e40;   /* gedämpft für Fließtext */
-  --trennlinie:   #b07830;   /* goldene Linie – Signature-Element */
-  --nav-bg:       rgba(42, 32, 24, 0.88);  /* dunkle Nav auf hellem Grund */
+  --trennlinie:   #b07830;   /* goldene Linie */
+  --nav-bg:       rgba(42, 32, 24, 0.88);
 }
 
 /* ==========================
@@ -46,7 +44,6 @@ body {
   display: flex;
   justify-content: center;
   flex-wrap: wrap;
-  gap: 0;
   padding: 1.5rem 1rem;
   background: var(--nav-bg);
   backdrop-filter: blur(6px);
@@ -59,7 +56,6 @@ body {
   letter-spacing: 0.04em;
   text-decoration: none;
   padding: 0.3rem 1.1rem;
-  border-radius: 2px;
   transition: color 0.2s ease;
 }
 
@@ -81,7 +77,6 @@ body {
   text-align: center;
   padding: 3rem 2rem;
   overflow: hidden;
-  background: linear-gradient(135deg, #e8d5b0 0%, #d4ede8 50%, #e8d5b0 100%);
 }
 
 .hero-bg {
@@ -90,7 +85,7 @@ body {
   width: 100%;
   height: 100%;
   object-fit: cover;
-  object-position: center;
+  object-position: center top;
   z-index: 0;
   opacity: 0.65;
   pointer-events: none;
@@ -103,7 +98,7 @@ body {
   bottom: 0;
   left: 0;
   width: 100%;
-  height: 140px;
+  height: 180px;
   background: linear-gradient(to bottom, transparent, var(--hintergrund));
   z-index: 1;
   pointer-events: none;
@@ -120,14 +115,16 @@ body {
   font-size: clamp(2.2rem, 5vw, 3.5rem);
   font-weight: 300;
   letter-spacing: 0.06em;
-  color: var(--text);
+  color: #ffffff;
+  text-shadow: 0 2px 12px rgba(0,0,0,0.6), 0 1px 4px rgba(0,0,0,0.8);
   margin: 0 0 0.4rem 0;
 }
 
 .hero h2 {
   font-size: clamp(1rem, 2.5vw, 1.4rem);
   font-weight: 300;
-  color: var(--tuerkis);
+  color: #f0ebe2;
+  text-shadow: 0 1px 8px rgba(0,0,0,0.7);
   margin: 0 0 1.5rem 0;
   letter-spacing: 0.03em;
 }
@@ -136,7 +133,8 @@ body {
   max-width: 600px;
   font-size: 1.05rem;
   line-height: 1.65;
-  color: var(--text-soft);
+  color: #f0ebe2;
+  text-shadow: 0 1px 6px rgba(0,0,0,0.6);
 }
 
 /* ==========================
@@ -151,7 +149,7 @@ body {
 }
 
 /* ==========================
-   Goldene Trennlinie (Signature)
+   Goldene Trennlinie
    ========================== */
 .gold-divider {
   display: block;
@@ -228,7 +226,6 @@ footer a:hover {
    ========================== */
 @media (max-width: 600px) {
   .main-nav {
-    gap: 0.2rem;
     padding: 1rem 0.5rem;
   }
 
