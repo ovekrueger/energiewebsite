@@ -1,47 +1,61 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="de">
 <head>
-  <meta charset="utf-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>Angebote – Ruth Gröger</title>
-  <meta name="description" content="Sessions und Begleitung" />
-  <link rel="stylesheet" href="style.css" />
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Lora:ital,wght@0,400..700;1,400..700&family=Source+Sans+3:ital,wght@0,400..700;1,400..700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="./style.css">
 </head>
 <body>
+<div id="rg-bg"></div>
 
-  <nav class="main-nav">
-    <a href="index.html">Start</a>
-    <a href="ueber-mich.html">Über mich</a>
-    <a href="energie-medizin.html">Energiemedizin</a>
-    <a href="breathwork.html">Breathwork</a>
-    <a href="angebote.html">Angebote</a>
-    <a href="kontakt.html">Kontakt</a>
-  </nav>
+<header class="site-header">
+  <div class="nav-container">
+    <a class="brand" href="index.html">Freifluss</a>
+    <nav aria-label="Hauptnavigation">
+      <ul class="nav-list">
+        <li><a href="index.html">Start</a></li>
+        <li><a href="ueber-mich.html">Über mich</a></li>
+        <li><a href="energie-medizin.html">Energiemedizin</a></li>
+        <li><a href="breathwork.html">Breathwork</a></li>
+        <li><a href="musik.html">Musik</a></li>
+        <li><a href="angebote.html" class="active">Angebote</a></li>
+        <li><a href="kontakt.html">Kontakt</a></li>
+      </ul>
+    </nav>
+  </div>
+</header>
 
-  <section class="hero hero-page">
-    <img src="assets/images/hero-unterseite.jpg" alt="Sessions und Begleitung" class="hero-bg">
-    <div class="hero-inner">
-      <h1>Angebote</h1>
-      <p class="hero-sub">Einzelbegleitung, Erstgespräch und weitere Formate – auf dich abgestimmt.</p>
+<main>
+  <section class="hero hero-page" aria-label="Hero">
+    <img class="hero-img" src="assets/hero-unterseite.jpg" alt="">
+    <div class="hero-overlay-dark"></div>
+    <div class="hero-overlay-light"></div>
+    <div class="hero-content">
+      <h1 class="hero-title">Angebote</h1>
     </div>
   </section>
 
-  <main class="content">
-
-    <hr class="gold-divider">
-
-    <h2>Sessions und Begleitung</h2>
+  <section class="content" aria-label="Angebote">
+    <hr class="divider" aria-hidden="true">
+    <h2>Einzelsitzungen & Breathwork</h2>
     <p>Text folgt.</p>
+    <hr class="divider" aria-hidden="true">
+  </section>
+</main>
 
-    <hr class="gold-divider">
-
-  </main>
-
-  <footer>
-    <a href="impressum.html">Impressum</a>
-    <a href="datenschutz.html">Datenschutz</a>
-    <span>© 2026 Ruth Gröger</span>
-  </footer>
+<footer class="site-footer" role="contentinfo">
+  <div class="footer-inner">
+    <ul class="footer-links">
+      <li><a href="impressum.html">Impressum</a></li>
+      <li><a href="datenschutz.html">Datenschutz</a></li>
+    </ul>
+    <span class="footer-copy">© 2026 Freifluss · Ruth Gröger</span>
+  </div>
+</footer>
 
 </body>
 </html>
