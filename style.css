@@ -2,7 +2,6 @@
    Freifluss – Ruth Gröger
    Gemeinsames Stylesheet für alle Seiten
    ========================================================================== */
-
 :root {
   --cream: #faf6f0;
   --turquoise-dark: #2e6b65;
@@ -80,7 +79,6 @@
   --ease: cubic-bezier(0.22, 0.61, 0.36, 1);
   color-scheme: light;
 }
-
 /* ── Basis ── */
 html, body { height: 100%; margin: 0; }
 body {
@@ -108,7 +106,6 @@ h1, h2, h3 {
 a { color: var(--link); text-decoration: none; transition: color 0.2s var(--ease); }
 a:hover { color: var(--turquoise-dark); }
 p { text-wrap: pretty; }
-
 /* ── Header / Navigation ── */
 .site-header {
   position: sticky; top: 0; z-index: 50;
@@ -143,7 +140,6 @@ p { text-wrap: pretty; }
   font-weight: var(--fw-semibold);
   border-bottom-color: var(--gold);
 }
-
 /* ── Hero ── */
 .hero {
   position: relative; min-height: 80vh;
@@ -170,13 +166,11 @@ p { text-wrap: pretty; }
   font-size: var(--quote); line-height: 1.3; margin: 0;
   text-shadow: 0 2px 18px rgba(46, 40, 30, 0.4);
 }
-
 /* ── Intro-Sektion ── */
 .intro-section { max-width: var(--width-text); margin: 0 auto; padding: 64px 26px 8px; text-align: center; }
 .divider { width: var(--divider-lg); height: var(--divider-h); border: 0; background: var(--gold); margin: var(--space-7) auto; }
 .intro-heading { font-family: var(--font-serif); font-weight: 500; color: var(--turquoise-dark); font-size: var(--h2); margin: 0 0 16px; line-height: var(--lh-heading); }
 .intro-text { font-family: var(--font-sans); font-size: var(--text-lead); font-weight: var(--fw-light); color: var(--ink); line-height: var(--lh-body); }
-
 /* ── Karten ── */
 .cards-section { max-width: var(--width-wide); margin: 0 auto; padding: 32px 26px 64px; }
 .cards-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(240px, 1fr)); gap: var(--grid-gap); }
@@ -186,26 +180,24 @@ p { text-wrap: pretty; }
 }
 .card-divider { width: var(--divider-sm); height: var(--divider-h); border: 0; background: var(--gold); margin: 0 0 18px; }
 .card-title { font-family: var(--font-serif); font-weight: var(--fw-medium); color: var(--text-heading); font-size: var(--h3); line-height: var(--lh-heading); margin: 0 0 10px; }
+.card-title--centered { text-align: center; }
+.card-title-sub { display: block; font-size: 0.6em; font-weight: var(--fw-normal); opacity: 0.8; margin-top: 2px; }
 .card-text { color: var(--text-body); font-size: var(--text-base); line-height: var(--lh-body); }
 .card-link { display: inline-flex; align-items: center; gap: 0.4em; margin-top: 16px; color: var(--turquoise-light); font-weight: var(--fw-semibold); text-decoration: none; font-size: var(--text-base); }
-
 /* ── Zitat-Band ── */
 .quote-band { background: var(--surface-dark); padding: 80px var(--pad-x); text-align: center; }
 .quote-band-inner { max-width: var(--width-text); margin: 0 auto; }
 .quote-divider { width: var(--divider-md); height: var(--divider-h); border: 0; background: var(--gold); margin: 0 auto 28px; }
 .quote-text { margin: 0; font-family: var(--font-serif); font-style: italic; font-weight: var(--fw-medium); color: var(--cream); font-size: var(--quote); line-height: 1.3; }
-
 /* ── Footer ── */
 .site-footer { background: var(--surface-footer); color: var(--footer-fg); border-top: 1px solid var(--line-footer); padding: 32px var(--pad-x); }
 .footer-inner { max-width: var(--width-wide); margin: 0 auto; display: flex; flex-wrap: wrap; gap: 10px 24px; align-items: center; justify-content: center; text-align: center; font-size: var(--text-sm); }
 .footer-links { display: flex; gap: 24px; list-style: none; margin: 0; padding: 0; }
 .footer-links a { color: var(--footer-fg); text-decoration: none; }
 .footer-copy { opacity: 0.75; }
-
 /* ── Hero-Variante für Unterseiten (kürzer als Startseiten-Hero) ── */
 .hero-page { min-height: 38vh; }
 .hero-page .hero-title { font-size: var(--h1-sub); }
-
 /* ── Fließtext-Bereich (Unterseiten mit Text statt Karten) ── */
 .content { max-width: var(--width-text); margin: 0 auto; padding: 48px 26px 64px; }
 .content h2 { font-size: var(--h2); color: var(--turquoise-dark); margin-bottom: 1rem; }
@@ -213,13 +205,11 @@ p { text-wrap: pretty; }
 .content p { color: var(--ink-soft); margin-bottom: 1.2rem; }
 .content a { color: var(--turquoise-light); border-bottom: 1px solid transparent; }
 .content a:hover { border-bottom-color: var(--turquoise-light); }
-
 /* ── Barrierefreiheit ── */
 @media (prefers-reduced-motion: reduce) {
   * { transition: none !important; animation: none !important; }
 }
 :focus-visible { outline: 2px solid var(--gold); outline-offset: 3px; }
-
 /* ── Responsive ── */
 @media (max-width: 600px) {
   .nav-container { padding: 12px var(--pad-x); }
