@@ -181,7 +181,7 @@ p { text-wrap: pretty; }
 .card-divider { width: var(--divider-sm); height: var(--divider-h); border: 0; background: var(--gold); margin: 0 0 18px; }
 .card-title { font-family: var(--font-serif); font-weight: var(--fw-medium); color: var(--text-heading); font-size: var(--h3); line-height: var(--lh-heading); margin: 0 0 10px; }
 .card-title--centered { text-align: center; }
-.card-title-sub { display: block; font-size: 0.6em; font-weight: var(--fw-normal); opacity: 0.8; margin-top: 2px; }
+.card-title-sub { display: block; font-size: 1em; font-weight: inherit; opacity: 1; margin-top: 2px; }
 .card-text { color: var(--text-body); font-size: var(--text-base); line-height: var(--lh-body); }
 .card-link { display: inline-flex; align-items: center; gap: 0.4em; margin-top: 16px; color: var(--turquoise-light); font-weight: var(--fw-semibold); text-decoration: none; font-size: var(--text-base); }
 /* ── Zitat-Band ── */
