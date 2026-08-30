@@ -179,7 +179,7 @@ p { text-wrap: pretty; }
 }
 .portrait-grid {
   display: grid;
-  grid-template-columns: 320px 1fr;
+  grid-template-columns: 280px 1fr;
   gap: var(--space-8);
   align-items: center;
   background: var(--surface-card);
@@ -189,12 +189,15 @@ p { text-wrap: pretty; }
   padding: var(--space-6);
 }
 .portrait-img {
-  width: 100%;
-  height: 380px;
+  width: 280px;
+  height: 280px;
   object-fit: cover;
-  object-position: center 20%;
-  border-radius: 10px;
+  object-position: center 45%;
+  border-radius: 50%;
   display: block;
+  margin: 0 auto;
+  border: 4px solid var(--cream);
+  box-shadow: var(--shadow-card);
 }
 .portrait-text .card-text { margin-bottom: 4px; }
 @media (max-width: 720px) {
@@ -202,7 +205,7 @@ p { text-wrap: pretty; }
     grid-template-columns: 1fr;
     text-align: center;
   }
-  .portrait-img { height: 320px; }
+  .portrait-img { width: 220px; height: 220px; }
   .portrait-text .intro-heading { text-align: center !important; }
 }
 /* ── Karten ── */
